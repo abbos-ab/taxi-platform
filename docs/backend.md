@@ -1,4 +1,4 @@
-# Backend — TURBO TAXI API
+# Backend — TURB TAXI API
 
 ## Стек
 
@@ -72,7 +72,7 @@ pip install -r requirements.txt
 Файл `backend/app/.env` уже содержит настройки по умолчанию:
 
 ```env
-APP_NAME=TURBO TAXI API
+APP_NAME=TURB TAXI API
 APP_ENV=development
 DATABASE_URL=sqlite:///./taxi.db
 DEFAULT_CITY=Khujand

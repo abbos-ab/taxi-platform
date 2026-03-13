@@ -53,7 +53,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             {expanded && (
               <div className="overflow-hidden">
                 <h1 className="text-[13px] font-semibold leading-tight">
-                  TURBO TAXI
+                  TURB TAXI
                 </h1>
                 <p className="text-[10px] text-white/40">Сервис такси</p>
               </div>
@@ -161,7 +161,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <div className="border-t border-white/10 p-3">
             {expanded ? (
               <div className="rounded-md bg-white/5 px-2.5 py-2 text-center text-[10px] text-white/30">
-                TURBO TAXI v1.0
+                TURB TAXI v1.0
               </div>
             ) : (
               <div className="text-center text-[9px] text-white/20">v1.0</div>

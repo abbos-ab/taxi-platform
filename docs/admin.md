@@ -1,4 +1,4 @@
-# Admin — Панель управления TURBO TAXI
+# Admin — Панель управления TURB TAXI
 
 ## Стек
 

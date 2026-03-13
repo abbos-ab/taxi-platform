@@ -10,4 +10,4 @@ app.include_router(fare_router)
 
 @app.get("/")
 def root():
-    return {"message": "TURBO TAXI API running"}
+    return {"message": "TURB TAXI API running"}

@@ -37,7 +37,7 @@ export function Sidebar() {
           TT
         </div>
         <div>
-          <h1 className="text-sm font-semibold leading-tight">TURBO TAXI</h1>
+          <h1 className="text-sm font-semibold leading-tight">TURB TAXI</h1>
           <p className="text-[11px] text-white/50">Панель управления</p>
         </div>
       </div>

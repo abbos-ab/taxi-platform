@@ -1,4 +1,4 @@
-# Frontend — TURBO TAXI UI
+# Frontend — TURB TAXI UI
 
 ## Стек
 
