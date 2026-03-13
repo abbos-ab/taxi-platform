@@ -1,4 +1,4 @@
-# Admin — Панель управления Khujand Taxi
+# Admin — Панель управления TURBO TAXI
 
 ## Стек
 

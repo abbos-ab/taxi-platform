@@ -147,7 +147,7 @@ export default function KhujandTaxiUI() {
               <div className="flex items-center justify-between">
                 <div>
                   <div className="text-xs uppercase tracking-[0.25em] text-slate-300">
-                    Khujand Taxi
+                    TURBO TAXI
                   </div>
                   <h1 className="mt-2 text-3xl font-bold">
                     Закажите поездку

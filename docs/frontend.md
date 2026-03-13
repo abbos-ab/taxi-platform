@@ -1,4 +1,4 @@
-# Frontend — Khujand Taxi UI
+# Frontend — TURBO TAXI UI
 
 ## Стек
 

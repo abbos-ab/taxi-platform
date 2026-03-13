@@ -2,7 +2,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    app_name: str = "Khujand Taxi API"
+    app_name: str = "TURBO TAXI API"
 
     default_city: str = "Khujand"
     default_currency: str = "TJS"

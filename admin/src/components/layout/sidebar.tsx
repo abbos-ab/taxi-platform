@@ -34,10 +34,10 @@ export function Sidebar() {
       {/* Logo */}
       <div className="flex items-center gap-3 px-5 py-5 border-b border-white/10">
         <div className="w-9 h-9 rounded-lg bg-[var(--color-accent)] flex items-center justify-center font-bold text-sm">
-          KT
+          TT
         </div>
         <div>
-          <h1 className="text-sm font-semibold leading-tight">Khujand Taxi</h1>
+          <h1 className="text-sm font-semibold leading-tight">TURBO TAXI</h1>
           <p className="text-[11px] text-white/50">Панель управления</p>
         </div>
       </div>
