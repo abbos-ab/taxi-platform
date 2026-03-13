@@ -1,12 +1,98 @@
+# ==========================
 # OS
+# ==========================
 .DS_Store
 Thumbs.db
-
-# IDE
-.vscode/
-.idea/
 *.swp
 *.swo
 
-# Logs
+# ==========================
+# IDE
+# ==========================
+.vscode/
+.idea/
+*.iml
+
+# ==========================
+# Python / Django (backend/)
+# ==========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+venv/
+.venv/
+env/
+.env
+*.sqlite3
+db.sqlite3
+staticfiles/
+media/
 *.log
+celerybeat-schedule
+celerybeat.pid
+
+# ==========================
+# Node.js (realtime/, admin-panel/, mobile/)
+# ==========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+# ==========================
+# Vite (admin-panel/)
+# ==========================
+admin-panel/dist/
+.vite/
+
+# ==========================
+# React Native (mobile/)
+# ==========================
+mobile/passenger-app/android/app/build/
+mobile/passenger-app/android/.gradle/
+mobile/passenger-app/ios/Pods/
+mobile/passenger-app/ios/build/
+mobile/driver-app/android/app/build/
+mobile/driver-app/android/.gradle/
+mobile/driver-app/ios/Pods/
+mobile/driver-app/ios/build/
+*.jks
+*.keystore
+*.hprof
+
+# ==========================
+# Next.js (legacy, if any)
+# ==========================
+.next/
+
+# ==========================
+# Environment & secrets
+# ==========================
+.env
+.env.*
+!.env.example
+
+# ==========================
+# Testing & coverage
+# ==========================
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+coverage/
+
+# ==========================
+# Misc
+# ==========================
+*.log
+*.tmp
+*.bak
+*.orig
