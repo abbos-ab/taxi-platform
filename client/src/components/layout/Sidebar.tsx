@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useSidebarStore } from '../../store/useSidebarStore';
 import { ru } from '../../i18n/ru';
 
 const menuItems = [
@@ -33,38 +34,75 @@ const menuItems = [
 ];
 
 export const Sidebar: React.FC = () => {
+  const { collapsed, toggle } = useSidebarStore();
+
   return (
-    <aside className="fixed left-0 top-0 bottom-0 w-60 bg-primary flex flex-col z-50">
-      {/* Logo */}
-      <div className="px-6 py-5 border-b border-white/10">
-        <h1 className="text-xl font-bold text-white tracking-wide">{ru.app.name}</h1>
-        <p className="text-xs text-gray-400 mt-0.5">{ru.app.tagline}</p>
+    <aside
+      className={`fixed left-0 top-0 bottom-0 bg-primary flex flex-col z-50 overflow-hidden transition-all duration-300 ease-in-out ${
+        collapsed ? 'w-[72px]' : 'w-60'
+      }`}
+    >
+      {/* Toggle + Logo */}
+      <div className="px-4 py-4 border-b border-white/10 flex items-center gap-3 min-h-[66px]">
+        <button
+          onClick={toggle}
+          className="w-10 h-10 flex items-center justify-center rounded-xl hover:bg-white/10 transition-colors flex-shrink-0"
+        >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+            {collapsed ? (
+              <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+            ) : (
+              <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+            )}
+          </svg>
+        </button>
+        <span
+          className={`text-lg font-bold text-white tracking-wide whitespace-nowrap transition-all duration-300 ease-in-out ${
+            collapsed ? 'opacity-0 w-0' : 'opacity-100 w-auto'
+          }`}
+        >
+          {ru.app.name}
+        </span>
       </div>
 
       {/* Menu */}
-      <nav className="flex-1 py-4 px-3 space-y-1">
+      <nav className="flex-1 py-4 px-2 space-y-1">
         {menuItems.map((item) => (
           <NavLink
             key={item.to}
             to={item.to}
             end={item.to === '/'}
+            title={item.label}
             className={({ isActive }) =>
-              `flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all
+              `flex items-center h-11 rounded-xl font-medium transition-all duration-300 ease-in-out overflow-hidden
+              ${collapsed ? 'justify-center px-0 gap-0' : 'px-4 text-sm gap-3'}
               ${isActive
                 ? 'bg-accent text-white'
                 : 'text-gray-300 hover:bg-white/10 hover:text-white'
               }`
             }
           >
-            {item.icon}
-            {item.label}
+            <span className="flex-shrink-0">{item.icon}</span>
+            <span
+              className={`whitespace-nowrap transition-all duration-300 ease-in-out ${
+                collapsed ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100 w-auto'
+              }`}
+            >
+              {item.label}
+            </span>
           </NavLink>
         ))}
       </nav>
 
       {/* Footer */}
-      <div className="px-6 py-4 border-t border-white/10">
-        <p className="text-xs text-gray-500">&copy; 2026 TURBO TAXI</p>
+      <div className="px-3 py-4 border-t border-white/10 overflow-hidden">
+        <p
+          className={`text-gray-500 whitespace-nowrap transition-all duration-300 ease-in-out ${
+            collapsed ? 'text-[10px] text-center opacity-100' : 'text-xs px-1 opacity-100'
+          }`}
+        >
+          {collapsed ? 'TT' : '\u00A9 2026 TURBO TAXI'}
+        </p>
       </div>
     </aside>
   );
