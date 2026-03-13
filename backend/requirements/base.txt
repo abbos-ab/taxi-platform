@@ -1,0 +1,14 @@
+Django>=5.0,<6.0
+djangorestframework>=3.15
+djangorestframework-simplejwt
+drf-spectacular
+django-cors-headers
+django-filter
+django-environ
+psycopg2-binary
+celery[redis]
+django-celery-beat
+firebase-admin
+Pillow
+requests
+gunicorn
