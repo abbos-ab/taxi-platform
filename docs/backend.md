@@ -7,10 +7,24 @@
 - **Uvicorn** — ASGI-сервер
 - **Pydantic** — валидация данных и настройки
 
+## Зависимости
+
+Все зависимости указаны в файле `backend/requirements.txt`:
+
+| Пакет              | Версия   | Назначение                              |
+|--------------------|----------|-----------------------------------------|
+| `fastapi`          | >=0.115  | Веб-фреймворк для API                   |
+| `uvicorn`          | >=0.34   | ASGI-сервер для запуска FastAPI          |
+| `pydantic`         | >=2.0    | Валидация данных, модели запросов/ответов |
+| `pydantic-settings`| >=2.0    | Загрузка настроек из `.env` файла        |
+| `sqlalchemy`       | >=2.0    | ORM для работы с базой данных            |
+| `python-dotenv`    | >=1.0    | Чтение переменных окружения из `.env`    |
+
 ## Структура
 
 ```
 backend/
+├── requirements.txt         # Файл зависимостей
 └── app/
     ├── main.py              # Точка входа FastAPI
     ├── .env                 # Переменные окружения
@@ -50,7 +64,7 @@ source venv/bin/activate
 ### 3. Установить зависимости
 
 ```bash
-pip install fastapi uvicorn pydantic pydantic-settings
+pip install -r requirements.txt
 ```
 
 ### 4. Проверить файл `.env`
