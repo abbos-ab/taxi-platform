@@ -31,7 +31,7 @@ export const SearchingPage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-[calc(100vh-56px)] bg-background p-6">
+    <div className="flex flex-col items-center justify-center h-screen bg-background p-6">
       {/* Pulsing animation */}
       <div className="relative mb-8">
         <div className="w-24 h-24 bg-accent/20 rounded-full animate-ping absolute" />

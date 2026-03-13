@@ -66,7 +66,7 @@ export const HomePage: React.FC = () => {
     : [38.5598, 68.774];
 
   return (
-    <div className="h-[calc(100vh-56px-56px)] sm:h-[calc(100vh-56px)] relative">
+    <div className="h-screen relative">
       <MapView center={mapCenter}>
         {currentLocation && <MapCenter center={[currentLocation.lat, currentLocation.lng]} />}
         <LocationPicker onLocationSelect={handleLocationSelect} />

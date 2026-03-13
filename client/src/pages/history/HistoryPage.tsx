@@ -20,7 +20,7 @@ export const HistoryPage: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="flex items-center justify-center h-[calc(100vh-56px)]">
+      <div className="flex items-center justify-center h-screen">
         <LoadingSpinner />
       </div>
     );
@@ -29,7 +29,7 @@ export const HistoryPage: React.FC = () => {
   const rides = data?.results || [];
 
   return (
-    <div className="max-w-2xl mx-auto p-4 pb-20 sm:pb-4">
+    <div className="max-w-2xl mx-auto p-4">
       <h1 className="text-2xl font-bold text-primary mb-4">{ru.history.title}</h1>
 
       {rides.length === 0 ? (

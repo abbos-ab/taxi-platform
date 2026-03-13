@@ -54,7 +54,7 @@ export const ChatPage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-[calc(100vh-56px-56px)] sm:h-[calc(100vh-56px)]">
+    <div className="flex flex-col h-screen">
       <div className="bg-white border-b border-border px-4 py-3">
         <h2 className="font-semibold text-primary">{ru.chat.title}</h2>
       </div>

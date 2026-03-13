@@ -68,7 +68,7 @@ export const OrderPage: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-[calc(100vh-56px)]">
+      <div className="flex items-center justify-center h-screen">
         <LoadingSpinner text="Рассчитываем маршрут..." />
       </div>
     );
@@ -80,7 +80,7 @@ export const OrderPage: React.FC = () => {
     : [38.5598, 68.774];
 
   return (
-    <div className="flex flex-col h-[calc(100vh-56px-56px)] sm:h-[calc(100vh-56px)]">
+    <div className="flex flex-col h-[calc(100vh-56px-56px)] sm:h-screen">
       <div className="flex-1 relative">
         <MapView center={center} zoom={13}>
           <RoutePolyline positions={route} />

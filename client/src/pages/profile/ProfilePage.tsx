@@ -41,7 +41,7 @@ export const ProfilePage: React.FC = () => {
   };
 
   return (
-    <div className="max-w-sm mx-auto p-4 pb-20 sm:pb-4">
+    <div className="max-w-sm mx-auto p-4">
       <h1 className="text-2xl font-bold text-primary mb-6">{ru.profile.title}</h1>
 
       <div className="bg-white rounded-2xl p-6 shadow-sm space-y-4">

@@ -12,24 +12,10 @@ import { HistoryPage } from './pages/history/HistoryPage';
 import { ChatPage } from './pages/chat/ChatPage';
 import { ProfilePage } from './pages/profile/ProfilePage';
 
-const ProtectedRoute = () => {
-  const isAuth = useAuthStore((s) => s.isAuthenticated);
-  return isAuth ? (
-    <AppLayout />
-  ) : (
-    <Navigate to="/auth" />
-  );
-};
-
-const PublicRoute = () => {
-  const isAuth = useAuthStore((s) => s.isAuthenticated);
-  return isAuth ? <Navigate to="/" /> : <Outlet />;
-};
-
 export const router = createBrowserRouter([
   {
     path: '/auth',
-    element: <PublicRoute />,
+    element: <Outlet />,
     children: [
       { index: true, element: <AuthPage /> },
       { path: 'otp', element: <OTPPage /> },
@@ -37,7 +23,7 @@ export const router = createBrowserRouter([
   },
   {
     path: '/',
-    element: <ProtectedRoute />,
+    element: <AppLayout />,
     children: [
       { index: true, element: <HomePage /> },
       { path: 'order', element: <OrderPage /> },

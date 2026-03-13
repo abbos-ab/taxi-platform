@@ -17,22 +17,22 @@ export const Header: React.FC = () => {
       <Link to="/" className="text-xl font-bold tracking-wide">
         {ru.app.name}
       </Link>
-      {isAuthenticated && (
-        <div className="flex items-center gap-4">
-          <Link to="/history" className="text-sm hover:text-accent transition-colors">
-            {ru.tabs.history}
-          </Link>
-          <Link to="/profile" className="text-sm hover:text-accent transition-colors">
-            {user?.name || ru.tabs.profile}
-          </Link>
+      <div className="flex items-center gap-4">
+        <Link to="/history" className="text-sm hover:text-accent transition-colors">
+          {ru.tabs.history}
+        </Link>
+        <Link to="/profile" className="text-sm hover:text-accent transition-colors">
+          {user?.name || ru.tabs.profile}
+        </Link>
+        {isAuthenticated && (
           <button
             onClick={handleLogout}
             className="text-sm text-gray-400 hover:text-white transition-colors"
           >
             {ru.profile.logout}
           </button>
-        </div>
-      )}
+        )}
+      </div>
     </header>
   );
 };

@@ -29,7 +29,7 @@ export const RatingPage: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-[calc(100vh-56px)] bg-background p-4">
+    <div className="flex items-center justify-center min-h-screen bg-background p-4">
       <div className="w-full max-w-sm bg-white rounded-2xl p-6 shadow-sm">
         <h2 className="text-xl font-bold text-primary text-center mb-2">{ru.rating.title}</h2>
 

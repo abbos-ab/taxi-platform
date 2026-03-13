@@ -27,7 +27,7 @@ export const RidePage: React.FC = () => {
       : [38.5598, 68.774];
 
   return (
-    <div className="flex flex-col h-[calc(100vh-56px-56px)] sm:h-[calc(100vh-56px)]">
+    <div className="flex flex-col h-screen">
       <div className="flex-1 relative">
         <MapView center={center} zoom={15}>
           {driverLocation && (

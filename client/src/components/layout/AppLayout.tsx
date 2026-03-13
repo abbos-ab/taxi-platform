@@ -1,16 +1,14 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { Header } from './Header';
-import { BottomNav } from './BottomNav';
+import { Sidebar } from './Sidebar';
 
 export const AppLayout: React.FC = () => {
   return (
-    <div className="min-h-screen bg-background flex flex-col">
-      <Header />
-      <main className="flex-1 relative">
+    <div className="min-h-screen bg-background flex">
+      <Sidebar />
+      <main className="flex-1 ml-60 relative min-h-screen">
         <Outlet />
       </main>
-      <BottomNav />
     </div>
   );
 };
