@@ -132,17 +132,17 @@ export default function KhujandTaxiUI() {
 
   return (
     <div className="min-h-screen bg-[var(--background)]">
-      <div className="mx-auto max-w-7xl p-4 lg:p-6">
+      <div className="p-3">
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3 }}
-          className="grid gap-6 lg:grid-cols-[420px_1fr]"
+          className="grid gap-3 lg:grid-cols-[360px_1fr]"
         >
           {/* Left panel */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             {/* Header */}
-            <div className="rounded-xl bg-[var(--primary)] p-5 text-white">
+            <div className="rounded-xl bg-[var(--primary)] p-4 text-white">
               <div className="flex items-center justify-between">
                 <div>
                   <h1 className="text-2xl font-bold">
@@ -164,8 +164,8 @@ export default function KhujandTaxiUI() {
             </div>
 
             {/* Tariffs */}
-            <div className="rounded-xl border border-[var(--border)] bg-[var(--card)] p-4">
-              <div className="space-y-2">
+            <div className="rounded-xl border border-[var(--border)] bg-[var(--card)] p-3">
+              <div className="space-y-1.5">
                 {tariffs.map((item) => {
                   const active = item.id === tariff;
                   const itemFare = calculateFare(
@@ -236,7 +236,7 @@ export default function KhujandTaxiUI() {
           </div>
 
           {/* Right panel */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             {/* Map */}
             <div className="overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--card)]">
               <div className="relative h-[520px] w-full">
@@ -260,7 +260,7 @@ export default function KhujandTaxiUI() {
             </div>
 
             {/* Metrics */}
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-3 md:grid-cols-3">
               <div className="rounded-xl border border-[var(--border)] bg-[var(--card)] p-4">
                 <div className="flex items-center gap-2 text-[12px] text-[var(--muted-foreground)]">
                   <Route className="h-4 w-4 text-[var(--accent)]" />
